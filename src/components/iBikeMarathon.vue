@@ -32,7 +32,7 @@
                 </option>
               </select>
               <b-button variant="outline-primary" @click="onSubmit()">
-                Submit
+                送出
               </b-button>
             </b-input-group>
           </b-form-group>
