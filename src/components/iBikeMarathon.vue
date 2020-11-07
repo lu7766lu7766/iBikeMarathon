@@ -112,9 +112,6 @@ export default {
     }
     const onSubmit = () => {
       const distance = CountDistance(location.lat, location.lng, selectedStation.value.Y, selectedStation.value.X).toFixed(2)
-      // iBike租還時間
-      // const IBIKE_BORROW_RETURN_COST_TIME = 0.5
-      // const waitTime = stations.length ? IBIKE_BORROW_RETURN_COST_TIME : 0
       // 第一站為步行時速
       const WALK_SPEED = 5
       const realSpeed = stations.length ? rideSpeed.value : WALK_SPEED
@@ -145,6 +142,13 @@ export default {
     const IBIKE_BORROW_RETURN_COST_TIME = 0.5
     const countCostTime = () => stations.reduce((res, x, i) => new Decimal(res).plus(x.costTime).plus(i ? IBIKE_BORROW_RETURN_COST_TIME : 0).toFixed(2), 0)
     // computed not work is bug??
+    // const total = computed(() => {
+    //   const IBIKE_BORROW_RETURN_COST_TIME = 0.5
+    //   return {
+    //     distance: stations.reduce((res, x) => new Decimal(res).plus(x.distance).toFixed(2), 0),
+    //     costTime: stations.reduce((res, x, i) => new Decimal(res).plus(x.costTime).plus(i ? IBIKE_BORROW_RETURN_COST_TIME : 0).toFixed(2), 0)
+    //   }
+    // })
 
     onMounted(() => {
       getLocation()
@@ -165,5 +169,4 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus"></style>
