@@ -13,6 +13,18 @@ export default {
 }
 </script>
 
+<style lang="scss">
+$body-bg: #eee;
+$body-color: #333;
+$theme-colors: (
+  "primary": green,
+  "danger": coral
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap-vue/dist/bootstrap-vue.css";
+</style>
+
 <style lang="stylus" scoped>
 .app::before
   opacity 0.1

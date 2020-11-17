@@ -50,7 +50,9 @@
                 { key: 'costTime', label: '預計花費時間' },
               ]"
             >
-              <template #table-caption>iBike租還有半小時等待時間</template>
+              <template #table-caption>
+                <span class="text-danger"> iBike租還有半小時等待時間 </span>
+              </template>
 
               <template #cell(index)="data">
                 {{ data.index + 1 }}
