@@ -4,7 +4,7 @@
       <b-col offset="3" lg="6">
         <b-overlay :show="isLoading" rounded="sm">
           <h3>iBike 馬拉松</h3>
-          <b-form-group label="騎車速度">
+          <b-form-group label="騎車速度(可分段調整)">
             <b-input-group>
               <b-form-input
                 v-model="rideSpeed"
