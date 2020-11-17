@@ -1,5 +1,6 @@
 function CountDistance(lat1: number, lon1: number, lat2: number, lon2: number) :number
 {
+  // 地球半徑
   const R = 6371; 
   const dLat:number = toRad(lat2-lat1);
   const dLon:number = toRad(lon2-lon1);
